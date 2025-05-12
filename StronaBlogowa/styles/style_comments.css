@@ -1,0 +1,53 @@
+.comments-section {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.comments-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comments-section form {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.comments-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comments-section input[type="text"],
+.comments-section textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.comments-section input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comments-section p.success-message {
+    color: #008000;
+}
+
+.comments-section p.error-message {
+    color: #FF0000;
+}
