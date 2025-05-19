@@ -5,7 +5,7 @@ FROM php:8.2-apache
 COPY ./SRC /var/www/html/
 
 # Zainstaluj potrzebne rozszerzenia PHP (przykład)
-# RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install mysqli
 
 # Udostępniamy port 80
 EXPOSE 80
