@@ -10,7 +10,13 @@ $blogID = $_POST['blogID'];
 $title = $_POST['title'];
 $content = $_POST['content'];
 
-$mysql = new mysqli("localhost", "root", "", "stronablogowa");
+$mysql= new mysqli(
+    getenv("DB_HOST"),
+    getenv("DB_USER"),
+    getenv("DB_PASS"),
+    getenv("DB_NAME")
+);
+
 if ($mysql->connect_error) {
     die("Błąd połączenia z bazą danych: " . $mysql->connect_error);
 }

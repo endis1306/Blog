@@ -1,6 +1,11 @@
 <?php
-$mysqli = new mysqli("localhost","root","","stronablogowa");
-if ($mysqli->connect_error) {
+$mysql= new mysqli(
+    getenv("DB_HOST"),
+    getenv("DB_USER"),
+    getenv("DB_PASS"),
+    getenv("DB_NAME")
+);
+if ($mysql->connect_error) {
     die("Błąd połączenia z bazą danych: " . $mysqli->connect_error);
 }
 
@@ -15,7 +20,7 @@ if ($password !== $confirmPassword) {
 }
 
 $sql = "SELECT * FROM users WHERE email = '$email' OR login = '$login'";
-$result = $mysqli->query($sql);
+$result = $mysql->query($sql);
 
 if ($result->num_rows > 0) {
     header("Location: rej.php?error=uzytkownik");
@@ -26,12 +31,12 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO users (email, login, password) VALUES ('$email', '$login', '$hashedPassword')";
 
-if ($mysqli->query($sql) === TRUE) {
+if ($mysql->query($sql) === TRUE) {
     header("Location: ../log.php");
     exit();
 } else {
-    echo "Błąd podczas rejestracji użytkownika: " . $mysqli->error;
+    echo "Błąd podczas rejestracji użytkownika: " . $mysql->error;
 }
 
-$mysqli->close();
+$mysql->close();
 ?>

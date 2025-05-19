@@ -61,7 +61,13 @@ if (isset($_POST['acceptCookie'])) {
     setCookieValue('acceptedCookie', 'true', 2); 
 }
 
-$mysql = new mysqli("localhost","root","","stronablogowa");
+$mysql= new mysqli(
+    getenv("DB_HOST"),
+    getenv("DB_USER"),
+    getenv("DB_PASS"),
+    getenv("DB_NAME")
+);
+
 if ($mysql->connect_error) {
     die("Błąd połączenia z bazą danych: " . $mysql->connect_error);
 }
@@ -160,7 +166,12 @@ $mysql->close();
     <div id="center">
         <h2>Najpopularniejsze blogi</h2>
         <?php
-        $mysql = new mysqli("localhost","root","","stronablogowa");
+        $mysql= new mysqli(
+            getenv("DB_HOST"),
+            getenv("DB_USER"),
+            getenv("DB_PASS"),
+            getenv("DB_NAME")
+        );
         $sql="SELECT users.id AS author_id,login,title,view,posts.ID AS posts_id,email FROM posts INNER JOIN users ON users.ID = posts.UserID ORDER BY view DESC LIMIT 10;";
         $result = $mysql->query($sql);
         if($result->num_rows>0){
@@ -181,7 +192,14 @@ $mysql->close();
     <div id="right">
         <h2>Ostatnio dodane blogi:</h2>
         <?php
-        $mysql = new mysqli("localhost","root","","stronablogowa");
+        
+        $mysql= new mysqli(
+            getenv("DB_HOST"),
+            getenv("DB_USER"),
+            getenv("DB_PASS"),
+            getenv("DB_NAME")
+        );
+
         $sql="SELECT users.id AS author_id,login,title,view,posts.ID AS posts_id,date,email FROM posts INNER JOIN users ON users.ID = posts.UserID ORDER BY date DESC LIMIT 10;";
         $result = $mysql->query($sql);
         if($result->num_rows>0){

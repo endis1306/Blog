@@ -76,7 +76,12 @@ footer {
             if (isset($_GET['author_id'])) {
                 $_SESSION['author_id'] = $_GET['author_id'];
             }
-            $conn = new mysqli("localhost", "root", "", "stronablogowa");
+            $conn= new mysqli(
+                getenv("DB_HOST"),
+                getenv("DB_USER"),
+                getenv("DB_PASS"),
+                getenv("DB_NAME")
+            );
             if ($conn->connect_error) {
                 die("Nieudane połączenie: " . $conn->connect_error);
             }
