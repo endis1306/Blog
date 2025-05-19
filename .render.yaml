@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: php-blog
+    env: docker
+    rootDir: StronaBlogowa
+    plan: free
+    autoDeploy: true
