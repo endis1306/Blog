@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -46,13 +49,7 @@
     </style>
 </head>
 <body>
-<?php
-session_start();
-// if (!isset($_COOKIE['acceptedCookie'])) {
-//     echo '<style>body { filter: blur(4px); }</style>';
-// } else {
-//     echo '<style>body { filter: none; }</style>';
-// }
+<?php 
 function setCookieValue($name, $value, $expiration) {
     $cookieName = urlencode($name);
     $cookieValue = urlencode($value);
@@ -60,12 +57,6 @@ function setCookieValue($name, $value, $expiration) {
 
     setcookie($cookieName, $cookieValue, $cookieExpiration, '/');
 }
-//  unset($_COOKIE['acceptedCookie']);
-// if (isset($_COOKIE['acceptedCookie'])) {
-//     echo "Ciasteczko istnieje.";
-// } else {
-//     echo "Ciasteczko nie istnieje.";
-// }
 if (isset($_POST['acceptCookie'])) {
     setCookieValue('acceptedCookie', 'true', 2); 
 }
