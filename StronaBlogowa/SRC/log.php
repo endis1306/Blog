@@ -14,7 +14,7 @@
         <a class="home-link" href="Index.php">Strona Główna</a>
     </header>
     <div>
-        <form action="Index.php" method="POST">
+        <form action="index.php" method="POST">
             <label for="email">Email: </label>
             <input type="email" required id="email" name="email"><br>
             <label for="password">Hasło: </label>
