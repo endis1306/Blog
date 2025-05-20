@@ -142,13 +142,6 @@ $mysql->close();
             <a href="all_users.php">Wszyscy użytkownicy</a>
         </div>
     </header>
-    <div id="cookieBanner" <?php if (isset($_COOKIE['acceptedCookie'])) { echo 'class="formHidden"'; } ?>>
-    <div id="cookieFormContainer">
-        <p>Ta strona wykorzystuje pliki cookie. Kliknij poniżej, aby zaakceptować.</p>
-        <form method="post">
-            <input type="submit" name="acceptCookie" value="Akceptuj">
-        </form>
-    </div>
 </div>
 
 </div>
