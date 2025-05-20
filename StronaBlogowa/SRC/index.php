@@ -50,16 +50,6 @@ session_start();
 </head>
 <body>
 <?php 
-function setCookieValue($name, $value, $expiration) {
-    $cookieName = urlencode($name);
-    $cookieValue = urlencode($value);
-    $cookieExpiration = time() + ($expiration * 60 * 60); 
-
-    setcookie($cookieName, $cookieValue, $cookieExpiration, '/');
-}
-if (isset($_POST['acceptCookie'])) {
-    setCookieValue('acceptedCookie', 'true', 2); 
-}
 
 $mysql= new mysqli(
     getenv("DB_HOST"),
@@ -218,7 +208,7 @@ $mysql->close();
         ?>
     </div>
     <footer>
-        <p style="color: white;">Strona zrobiona przez Pała Kulińskiego</p>
+        <p style="color: white;">Strona zrobiona przez Pawła Kulińskiego</p>
     </footer>
 </body>
 </html>
