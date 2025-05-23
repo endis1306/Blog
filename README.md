@@ -6,7 +6,7 @@ Strona internetowa typu blog stworzona w celach edukacyjnych. Pozwala na publiko
 
 ## 🌐 Demo
 
-🔗 [Zobacz działającą aplikację](https://twoj-blog-na-renderze.onrender.com)
+🔗 [Zobacz działającą aplikację](https://blog-7qxq.onrender.com)
 
 > **Uwaga:** Aplikacja korzysta z zewnętrznie hostowanej bazy danych MySQL. Upewnij się, że usługa bazy danych jest aktywna, aby korzystać z pełnej funkcjonalności.
 
