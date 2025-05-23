@@ -44,7 +44,7 @@
     ?>
 </div>
 <footer>
-<p style="color: white;">Strona zrobiona przez Paweła Kulińskiego</p>
+<p style="color: white;">Strona zrobiona przez Pawła Kulińskiego</p>
 </footer>
 </body>
 </html>
