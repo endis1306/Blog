@@ -16,7 +16,7 @@ Strona internetowa typu blog stworzona w celach edukacyjnych. Pozwala na publiko
 
 Zobacz zrzuty ekranu w repozytorium, prezentujące funkcjonalność aplikacji:
 
-📁 [`/screenshots`](https://github.com/twoj-github/blog-app/tree/main/screenshots)
+📁 [`/screenshots`](https://github.com/endis1306/Blog/tree/main/screenSchots)
 
 ---
 
