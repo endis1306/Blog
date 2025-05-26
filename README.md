@@ -25,7 +25,7 @@ Zobacz zrzuty ekranu w repozytorium, prezentujące funkcjonalność aplikacji:
 - **Frontend:** HTML, CSS
 - **Backend:** PHP
 - **Baza danych:** MySQL
-- **Hostowanie:** Render (Docker)
+- **Hostowanie:** Render
 - **Środowisko uruchomieniowe:** Docker
 
 ---
